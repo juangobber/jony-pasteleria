@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+html{
+    background-color: #464b52;
+    background-image: linear-gradient(315deg, #a8b5c0 0%, #f5f7fa 74%);
+}
+
+.grid-container{
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 9rem 5fr 8rem;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer";
+    gap: 10px;
+}
+/*Header*/
+.header{
+    background-color: transparent;
+    width: 100%;
+    grid-area: header;
+    margin-top: 1rem;
+}
+.contenedor-nav-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    top: 2rem;
+    width: 100%;
+}
+.logo-header{
+    position: relative;
+    width: 10rem;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 5rem;
+    width: 100%;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-width: 1px;
+
+    /*Colores*/
+    border-color: #8a8a8a;
+    background-color: #ffffff;
+
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    padding: 1rem;
+}
+/*Estilos de la lista y enlaces*/
+nav ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #1d3c49;
+}
+a:hover{
+    color: rgb(35, 128, 145);
+    font-weight: bolder;
+}
+.main{
+
+    grid-area: main;
+}
+
+.footer {
+    grid-area: footer;
+
+}
+
+/*Main*/
+h1{
+    font-family: 'Cookie', cursive;
+    font-weight: 500;
+    text-align: center;
+    font-size: 4rem;
+    margin: 2rem;
+}
+.imagen-home{
+    border-radius: 5px;
+    width: 100%;
+}
+h2{
+    text-align: center;
+    margin: 2rem;
+}
+/*Footer*/
+.footer{
+    background-color: #1d3c49;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer h4{
+    text-align: center;
+}
+.footer h4 a{
+    text-decoration: none;
+    color: #ffffff;
+}
+    
+/*Pagina de Productos*/
+
+.galeria{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:  1fr 1fr;
+    grid-template-areas: 
+    "img1 img2 img3"
+    "img4 img5 img6"
+    ;
+    gap: 10px;
+}
+
+.img{
+    width: 100%;
+}
+
+.img1{
+    grid-area: img1;
+}
+.img2{
+    grid-area: img2;
+}
+.img3{
+    grid-area: img3;
+}
+.img4{
+    grid-area: img4;
+}
+.img5{
+    grid-area: img5;
+}
+.img6{
+    grid-area: img6;
+}
+
+/*Página Historia*/
+
+.historia{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.historia div{
+    margin: 4rem;
+}
+.contenedor-imagen-retrato{
+    width: 500rem;
+}
+.retrato{
+    width: 100%;
+}
+
+/*Página Contacto*/
+.contacto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contenido-pagina-contacto{
+    width: 50%;
+    margin: 2rem;
+}
+.form-contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem;
+}
+.area-mensaje{
+    display: flex;
+    flex-direction: column;
+}
+.form-contacto div{
+    padding: 0.5rem;
+}
+.botones-formulario{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.botones-formulario input{
+    padding: 0.5rem;
+}
+
+/*queries*/
+@media screen and (max-width: 900px) {
+    .grid-container{
+        max-width: 800px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40rem 5fr 20rem;
+        grid-template-areas: 
+        "header header header"
+        "main main main"
+        "footer footer footer";
+        gap: 20px;
+    }
+    nav{
+        margin-top: 1rem;
+    }
+    .logo-header{
+        margin-top: 1rem;
+    }
+    .header{
+        display: flex;
+    }
+    .contenedor-nav-logo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contenedor-nav-logo nav ul{
+        display: flex;
+        flex-direction: column;
+            }
+    main section img{
+        height: 60rem;
+        object-fit: cover;
+    }
+    h1{
+        margin-top: 3rem;
+        font-size: 3rem;
+    }
+    .galeria{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:  1fr 1fr 1fr 1fr 1fr ;
+        grid-template-areas: 
+        "img1"
+        "img2"
+        "img3"
+        "img4"
+        "img5"
+        "img6";
+        gap: 10px;
+        }
+        /*imagenes de producto*/
+        .main section div{
+            width: 100%;
+        }
+
+        .main section div {
+            width: 100%;
+        }
+
+        .img {
+            height: auto;
+        }
+
+/*Página Historia*/
+
+.historia{
+    display: flex;
+    flex-direction:column-reverse;
+    margin: 2rem;
+}
+
+.contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+}
+        
+}
